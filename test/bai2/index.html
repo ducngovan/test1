@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>so nguyen to</title>
+</head>
+<body>
+<div class="content">
+    <div><h1>kiem tra so nguyen to</h1></div>
+    <div>
+        <span>nhap so nguyen : </span>
+        <input type="text" id="num" />
+    </div>
+    <div>
+        <button type="button" onclick="check()">SUBMIT</button>
+    </div>
+</div>
+<script>
+    function check() {
+        let num = parseInt(document.getElementById('num').value);
+        let i;
+        if(num<1){
+            alert("nhap lai so")
+        }else{
+          for(i=2; i<num; i++){
+              if(num %i ==0){
+                  alert("day khong phai so nguyen to");
+                  break;
+              }else{
+                  alert(num + " la so nguyen to");
+                  break;
+              }
+          }
+
+
+        }
+
+    }
+</script>
+</body>
+</html>
